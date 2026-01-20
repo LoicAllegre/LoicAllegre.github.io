@@ -22,10 +22,10 @@ footer p {
 
 html:not([data-mode]), html[data-mode="dark"] {
   color-scheme: dark;
-  --main-bg: rgb(27, 27, 30);
+  --main-bg: rgb(44, 44, 49);
   --mask-bg: rgb(68, 69, 70);
-  --main-border-color: rgb(44, 45, 45);
-  --text-color: rgb(187, 187, 187);
+  --main-border-color: rgb(44, 44, 49);
+  --text-color: rgb(201, 200, 200);
   --text-muted-color: #868686;
   --text-muted-highlight-color: #aeaeae;
   --heading-color: #cccccc;
@@ -54,7 +54,7 @@ html:not([data-mode]), html[data-mode="dark"] {
   --sidebar-btn-bg: #232328;
   --sidebar-btn-color: #787878;
   --avatar-border-color: rgb(206, 206, 206, 0.9);
-  --topbar-bg: rgb(27, 27, 30, 0.64);
+  --topbar-bg: rgb(44, 44, 49);
   --topbar-text-color: var(--text-color);
   --search-border-color: rgb(55, 55, 55);
   --search-icon-color: rgb(100, 102, 105);

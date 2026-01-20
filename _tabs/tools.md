@@ -6,7 +6,9 @@ order: 4
 ---
   
 
-Tools and software I either wrote or contributed to and that could possibly be useful to someone, some day[^1].
+Tools and software I either wrote or contributed to and that could possibly be useful to someone, some day.
+
+<sub>(Sadly, not vegan : may contain bugs)<sub>
 
 
 
@@ -21,5 +23,3 @@ If, however, you really enjoy wasting your days, you can check manually that thi
 
 
 
-
-[^1]: Sadly not vegan: may contain bugs.
