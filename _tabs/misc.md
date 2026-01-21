@@ -8,11 +8,11 @@ order: 5
 <script type="text/javascript" src="/assets/js/poetry.js"></script>
 
 
-## Did you know that :
+## Stuff that is cool :
 
-- [Deep Inference](http://alessio.guglielmi.name/res/cos/index.html) is very cool.
+- [Deep Inference](http://alessio.guglielmi.name/res/cos/index.html).
 
-- The syntax of Frege's Begriffschrift wasn't *that* bad.
+- [Mars](https://www.uahirise.org/hipod/)
 
 
 

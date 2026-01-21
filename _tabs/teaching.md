@@ -10,14 +10,14 @@ Regrettably for my past and future students, I also very much enjoy explaining s
 
 ### University of Montpellier
 
-- [Logic, Computability, Complexity]()  
+- [Logic, Computability, Complexity](#)  
 1st year of master's degree, 2025-2026
 
-- [Probability and Statistics]()  
+- [Probability and Statistics](#)  
 1st year of master's degree, 2025-2026
 
-- [Modal Logic for AI and Software Engineering]()  
+- [Modal Logic for AI and Software Engineering](#)  
 1st year of master's degree, 2025-2026
 
-- [Algorithms]()  
+- [Algorithms](#)  
 2nd year of bachelor's degree, 2025-2026
