@@ -8,13 +8,14 @@ order: 5
 <script type="text/javascript" src="/assets/js/poetry.js"></script>
 
 
-## Stuff that is cool :
+### Stuff that is cool :
 
 - [Deep Inference](http://alessio.guglielmi.name/res/cos/index.html).
 
 - [Mars](https://www.uahirise.org/hipod/)
 
 
+### Miscellaneous Miscellanea
 
 Among all the things I do to avoid actually doing any meaningful work, I quite enjoy reading, and sometimes writing, <a href="#" onclick="randomPoem();" title="Click for a random poem">poetry</a>.
 
