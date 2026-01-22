@@ -21,5 +21,5 @@ Nancy, France, July 1, 2024
 
 - [Quantifiers: A History Between Logic, Mathematics and Linguistics]()  
 Loïc Allègre, Christian Retoré  
-26th Colloqium of the Inter-IREM Commission "Epistemology and History of Mathematics"  
+26th Colloquium of the Inter-IREM Commission "Epistemology and History of Mathematics"  
 Valenciennes, France, May 23, 2025  
