@@ -1,18 +1,21 @@
 #  The contact options.
 
-- type: github
-  icon: "fab fa-github"
+- type: gitlab
+  icon: "fab fa-gitlab"
+  url: 'https://gitlab.com/loic.allegre'
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: orcid
+  icon: "fab fa-orcid"
+  url: 'https://orcid.org/0009-0004-5672-016X'
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+#- type: email
+#  icon: "fas fa-envelope"
+#  url:
+#  noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+#- type: rss
+#  icon: "fas fa-rss"
+#  noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
