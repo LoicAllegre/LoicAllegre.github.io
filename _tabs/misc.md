@@ -2,7 +2,7 @@
 # the default layout is 'page'
 title: Miscellaneous
 icon: fas fa-book
-order: 5
+order: 6
 ---
 
 <script type="text/javascript" src="/assets/js/poetry.js"></script>
@@ -10,7 +10,7 @@ order: 5
 
 ### Stuff that is cool :
 
-- [Deep Inference](http://alessio.guglielmi.name/res/cos/index.html).
+- [Deep Inference](http://alessio.guglielmi.name/res/cos/index.html)
 
 - [Mars](https://www.uahirise.org/hipod/)
 

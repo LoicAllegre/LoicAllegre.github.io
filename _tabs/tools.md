@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 title: Tools and Software
-icon: fas fa-terminal
+icon: fas fa-code
 order: 4
 ---
   
