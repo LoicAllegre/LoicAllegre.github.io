@@ -120,7 +120,7 @@ Click on the Yaku names for example hands and/or additional info. <a href="#/" o
 
 ### 5-Han Yaku
 
-- <a class="yakulink" href="#/" onclick="displayInfo('renhou', '')">Renhou</a> : Winning by Ron in the first uninterrupted turn.
+- <a class="yakulink" href="#/" onclick="displayInfo('renhou', '')">Renhou</a> : Winning by Ron before your first tile draw.
 
 <div id="renhou" style="padding-left: 50px; margin-bottom: 40px; display: none"></div>
 

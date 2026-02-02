@@ -59,7 +59,7 @@ var trivia = {
     "sanankou" : ['If a triplet is completed by calling Ron, that triplet is counted as open, and thus cannot count towards San\'ankou, even though the hand is still considered concealed.','If the triplet is completed by Tsumo, however, it is considered concealed and does count for San\'ankou.'],
     "shousangen" : ['Shousangen is cumulative with Fanpai, so in practice it is always worth at least 4 Han : 2 from Shousangen and 2 from Fanpai\'s'],
     "honroutou" : ['Since Honroutou requires all tiles to be Terminals or Honours, it cannot contain sequences. As such, in practice Honroutou always occurs with either Toitoitsu or Chiitoitsu (each giving 2 Han), so the cumulated hand value is at least 4 Han.'],
-    "ryanpeikou" : ['Ryanpeikou does not stack with Iipeikou, i.e. it does not give 3 + 2x1 Han, only 3', 'It also does not stack with Chiitoitsu : even though a Ryanpeikou hand contains the same tiles as a Chiitoitsu one, it cannot be both (since in one case the tiles are arranged in sequences, and in pairs in the other case). The player must choose which Yaku to apply (usually Ryanpeikou gives higher hand value).'],
+    "ryanpeikou" : ['Ryanpeikou does not stack with Iipeikou, i.e. it does not give 3 + 2x1 Han, only 3.', 'It also does not stack with Chiitoitsu : even though a Ryanpeikou hand contains the same tiles as a Chiitoitsu one, it cannot be both (since in one case the tiles are arranged in sequences, and in pairs in the other case). The player must choose which Yaku to apply (usually Ryanpeikou gives higher hand value).'],
     "renhou" : ['Renhou is valid only in the first <i>uninterrupted turn</i>, meaning it cannot be claimed if calls (Pon, Chii,...) have been made.', 'The status of Renhou is a bit peculiar. In official EMA rules, it is worth 5 Han, and cannot be combined with any other Yaku or even Dora.','Depending on the ruleset, Renhou is sometimes counted as a Yakuman, sometimes more rarely as a flat Baiman. In other cases (such as most online platforms), it is not even counted and awards no points at all.', 'Renhou (人和) means "Blessing of Man"'],
     "chinitsu" : ['Chin\'itsu is not cumulative with Hon\'itsu.'],
     "sanshokudoukou" : ['Contrary to Sanshoku Doujun, Sanshoku Doukou does not lose value if the hand is open.'],
@@ -73,7 +73,8 @@ var trivia = {
     "daisangen" : ['<i>Sekinin Barai</i> (see note below) applies if a player deals into the third dragon call when the two others have already been made.'],
     "daisuushii" : ['<i>Sekinin Barai</i> (see note below) applies if a player deals into the fourth wind call when the three others have already been made.'],
     "junchan" : ['Junchan Taiyai cannot be cumulated with Chanta, as Chanta requires at least one Honour tile.'],
-    "chanta" : ['Chanta requires at least one Honour tile to be present, otherwise the hand would be Junchan Taiyai, which cannot be cumulated with Chanta.']
+    "chanta" : ['Chanta requires at least one Honour tile to be present, otherwise the hand would be Junchan Taiyai, which cannot be cumulated with Chanta.'],
+    "chiitoi": ['Chitoitsu always gives exactly 25 <i>fu</i>, and no other minipoints can be awarded.', 'The tiles are considered to be in pairs, and cannot be considered as sequences for other Yaku\'s purpose. For example, a Chiitoitsu hand with three consecutive pairs <i>does not</i> count as Iipeikou.']
 }
 
 function toggleAllNotes(){
