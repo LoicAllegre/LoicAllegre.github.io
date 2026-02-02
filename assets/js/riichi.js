@@ -114,6 +114,16 @@ function displayInfo(elementId, handCode){
 
 function printHand(handCode){
 
+    var tileCutoff = 14;
+    var tileWidth = 6;
+    var tileSideWidth = 8;
+
+    if (window.matchMedia('screen and (max-width: 768px)').matches) {
+        tileCutoff = 6;
+        tileWidth = 12;
+        tileSideWidth = 16;
+    }
+
     var handHtml = "";
     //const regexp = /\[(\w+)\]\(([\@a-z0-9]+)\)*(\+\w+)?/;
     const regexp = /^\[(?<closed>\w+)\]\[(\([a-z0-9@]+\))?(\([a-z0-9@]+\))?(\([a-z0-9@]+\))?(\([a-z0-9@]+\))?\](?<win>\+\w+)/;
@@ -124,14 +134,14 @@ function printHand(handCode){
     console.log(matches);
 
     var tileCounter = 0;
-    var tileCutoff = 14;
+    
 
     for(let i = 0; i < closedPart.length; i = i+2){
         var margin_right = 2;
         if(i == closedPart.length-2){
             margin_right = 20;
         }
-        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[closedPart.substring(i,i+2)]}.png" width="6%" style="margin: 0 ${margin_right}px 20px 0;">`);
+        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[closedPart.substring(i,i+2)]}.png" width="${tileWidth}%" style="margin: 0 ${margin_right}px 20px 0;">`);
         tileCounter++;
     }
 
@@ -159,23 +169,23 @@ function printHand(handCode){
                 }
                 switch (called) {
                     case 1:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(1,3)]}.png" width="8%" style="margin: 15px 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(3,5)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="6%" style="margin: 0 20px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(1,3)]}.png" width="${tileSideWidth}%" style="margin: 15px 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(3,5)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="${tileWidth}%" style="margin: 0 20px 20px 0;">`);
                         tileCounter = tileCounter + 3;
                         break;
                     
                     case 2:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(3,5)]}.png" width="8%" style="margin: 15px 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="6%" style="margin: 0 20px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(3,5)]}.png" width="${tileSideWidth}%" style="margin: 15px 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="${tileWidth}%" style="margin: 0 20px 20px 0;">`);
                         tileCounter = tileCounter + 3;
                         break;
                     
                     case 3:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(5,7)]}.png" width="8%" style="margin: 15px 20px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(5,7)]}.png" width="${tileSideWidth}%" style="margin: 15px 20px 20px 0px;">`);
                         tileCounter = tileCounter + 3;
                         break;
 
@@ -187,10 +197,10 @@ function printHand(handCode){
                 if(tileCounter+4 > tileCutoff && tileCounter <= tileCutoff){
                     handHtml = handHtml.concat("<br/>");
                 }
-                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(4,6)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(6,8)]}.png" width="6%" style="margin: 0 20px 20px 0px;">`);
+                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(4,6)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(6,8)]}.png" width="${tileWidth}%" style="margin: 0 20px 20px 0px;">`);
                 tileCounter = tileCounter + 4;
             }
             if(meld.length == 9){
@@ -199,34 +209,34 @@ function printHand(handCode){
                 }
                 switch (called) {
                     case 1:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(1,3)]}.png" width="8%" style="margin: 15px 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(3,5)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(7,9)]}.png" width="6%" style="margin: 0 20px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(1,3)]}.png" width="${tileSideWidth}%" style="margin: 15px 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(3,5)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(7,9)]}.png" width="${tileWidth}%" style="margin: 0 20px 20px 0;">`);
                         tileCounter = tileCounter + 4;
                         break;
                     
                     case 2:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(3,5)]}.png" width="8%" style="margin: 15px 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(7,9)]}.png" width="6%" style="margin: 0 20px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(3,5)]}.png" width="${tileSideWidth}%" style="margin: 15px 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(5,7)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(7,9)]}.png" width="${tileWidth}%" style="margin: 0 20px 20px 0;">`);
                         tileCounter = tileCounter + 4;
                         break;
                     
                     case 3:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(5,7)]}.png" width="8%" style="margin: 15px 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(7,9)]}.png" width="6%" style="margin: 0 20px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(5,7)]}.png" width="${tileSideWidth}%" style="margin: 15px 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(7,9)]}.png" width="${tileWidth}%" style="margin: 0 20px 20px 0;">`);
                         tileCounter = tileCounter + 4;
                         break;
 
                     case 4:
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(4,6)]}.png" width="6%" style="margin: 0 2px 20px 0;">`);
-                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(7,9)]}.png" width="8%" style="margin: 15px 20px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(0,2)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(2,4)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[meld.substring(4,6)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0;">`);
+                        handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White_Horizontal/${tilecodes[meld.substring(7,9)]}.png" width="${tileSideWidth}%" style="margin: 15px 20px 20px 0px;">`);
                         tileCounter = tileCounter + 4;
 
                     default:
@@ -238,8 +248,9 @@ function printHand(handCode){
     
     if(tileCounter+1 > tileCutoff && tileCounter <= tileCutoff){
         handHtml = handHtml.concat("<br/>");
+        tileCounter = 0;
     }
-    handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[winTile.substring(1,3)]}.png" width="6%" style="margin: 0 2px 20px 0px;">`);
+    handHtml = handHtml.concat(`<img src="/assets/mahjong/Export/White/${tilecodes[winTile.substring(1,3)]}.png" width="${tileWidth}%" style="margin: 0 2px 20px 0px;">`);
 
     return handHtml;
 }
