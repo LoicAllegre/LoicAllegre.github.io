@@ -18,6 +18,10 @@ function randomPoem(onlySelf=true){
 var personal_poems = [
     {
         "author": "",
+        "text": "思い付く\n止まぬ霧雨\nの静けさ"
+    },
+    {
+        "author": "",
         "text": "風立ちぬ\n迷う思いに\n海の墓"
     },
     {
