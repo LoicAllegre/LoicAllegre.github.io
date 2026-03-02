@@ -64,7 +64,7 @@ var trivia = {
     "chinitsu" : ['Chin\'itsu is not cumulative with Hon\'itsu.'],
     "sanshokudoukou" : ['Contrary to Sanshoku Doujun, Sanshoku Doukou does not lose value if the hand is open.'],
     "tenhou" : ['Tenhou (天和) means "Blessing of Heaven".', 'The probability of attaining Tenhou, i.e. that a randomly drawn set of 14 tiles forms a valid hand, is around 1 in 330.000 (~ 0.0003%).'],
-    "chihou" : ['Chihou (地和) means "Bleassing of Earth".', 'As with Renhou, it must occur in the first uninterrupted turn, and thus cannot be claimed after other calls have been made.'],
+    "chihou" : ['Chihou (地和) means "Blessing of Earth".', 'As with Renhou, it must occur in the first uninterrupted turn, and thus cannot be claimed after other calls have been made.'],
     "kokushi" : ['Kokushi Musou (国士無双) can be literally translated as "Peerless Exemplary Citizen"'],
     "chuuren" : ['Chuurenpoutou (九蓮宝燈), sometimes called "Nine Gates" in english, is roughly translated as "Nine-Lotus Treasure Lamp".','Despite the very specific shape of this hand, it still follows the general pattern of four sets and one pair.','From the tiles 1112345678999, any additional tile in that family can slot in to form a valid hand, and thus Chuurenpoutou. This is known as "nine-wait" or "pure" Chuuren (純正九蓮宝燈, "junsei chuurenpoutou"), and in some rules counts as a double Yakuman.'],
     "suuankou" : ['If a triplet is completed by calling Ron, that triplet is counted as open, and thus cannot count towards Suuankou. See the note above on San\'ankou.'],
@@ -74,7 +74,7 @@ var trivia = {
     "daisuushii" : ['<i>Sekinin Barai</i> (see note below) applies if a player deals into the fourth wind call when the three others have already been made.'],
     "junchan" : ['Junchan Taiyai cannot be cumulated with Chanta, as Chanta requires at least one Honour tile.'],
     "chanta" : ['Chanta requires at least one Honour tile to be present, otherwise the hand would be Junchan Taiyai, which cannot be cumulated with Chanta.'],
-    "chiitoi": ['Chitoitsu always gives exactly 25 <i>fu</i>, and no other minipoints can be awarded.', 'The tiles are considered to be in pairs, and cannot be considered as sequences for other Yaku\'s purpose. For example, a Chiitoitsu hand with three consecutive pairs <i>does not</i> count as Iipeikou.']
+    "chiitoi": ['Chiitoitsu always gives exactly 25 <i>fu</i>, and no other minipoints can be awarded.', 'The tiles are considered to be in pairs, and cannot be considered as sequences for other Yaku\'s purpose. For example, a Chiitoitsu hand with three consecutive pairs <i>does not</i> count as Iipeikou.']
 }
 
 function toggleAllNotes(){
