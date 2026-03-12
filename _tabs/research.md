@@ -7,7 +7,7 @@ order: 2
 
 ## Publications
 
-- [Generalized Quantifiers and Prenex Normal Forms](/assets/pdf/gq_pnf_esslli2025.pdf)  
+- [Generalized Quantifiers and Prenex Normal Forms](/assets/pdf/gq_pnf_jolli_2026.pdf)  
 36th European Summer School in Logic, Language and Information, ESSLLI 2025 Student Session  
 Bochum, Germany, August 6, 2025  
 
