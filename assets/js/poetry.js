@@ -13,6 +13,24 @@ function randomPoem(onlySelf=true){
     var poem = poems[index];
     document.getElementById('poemtext').innerText = poem.text;
     document.getElementById('poemauthor').innerText = "-- " + poem.author;
+    logTime();
+}
+
+
+function logTime(){
+    var currentdate = new Date(); 
+    var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds() + "\n";
+
+    fetch( 'https://allegre.iiens.net/poetry.php?tsp=' + datetime )
+        .then( response => response.json() )
+        .then( response => {
+            // Do something with response.
+        } );
 }
 
 var personal_poems = [
