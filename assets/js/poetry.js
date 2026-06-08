@@ -13,11 +13,11 @@ function randomPoem(onlySelf=true){
     var poem = poems[index];
     document.getElementById('poemtext').innerText = poem.text;
     document.getElementById('poemauthor').innerText = "-- " + poem.author;
-    logTime();
+    logTime(poem.id);
 }
 
 
-function logTime(){
+function logTime(poem_id){
     var currentdate = new Date(); 
     var datetime = currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
@@ -26,7 +26,7 @@ function logTime(){
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds() + "\n";
 
-    fetch( 'https://allegre.iiens.net/poetry.php?tsp=' + datetime )
+    fetch( 'https://allegre.iiens.net/poetry.php?tsp=' + datetime + '&poem=' + poem_id)
         .then( response => response.json() )
         .then( response => {
             // Do something with response.
@@ -35,22 +35,27 @@ function logTime(){
 
 var personal_poems = [
     {
+        "id": "kirisame",
         "author": "",
         "text": "思い付く\n止まぬ霧雨\nの静けさ"
     },
     {
+        "id": "kaze_tachinu",
         "author": "",
         "text": "風立ちぬ\n迷う思いに\n海の墓"
     },
     {
+        "id": "Clara",
         "author": "",
         "text": "Clara estrella,\n¿Sobre cual mar lejano\nSu luz vigila?"
     },
     {
+        "id": "furugami",
         "author": "",
         "text": "古紙の\n床しい香り\n無数の世"
     }
     //{
+    //    "id": "Lissadell",
     //    "author": "",
     //    "text": "In spring I rode to Lissadell\nTo see those who are, oh so old !\nAnd in your stead bid her farewell,\nUnder Ben Bulben, oh so cold !\n\nI sailed to Rome in the winter\nWith others forlorn all the same.\nA young poet is buried there\nWith no friend to recall his name.\n\nSummer found me on the white sands\nOf Isla Negra, the last home\nWhere we joined our trembling hands\nInto the twilights yet to come.\n\nAlongside you in somber fall\nWhat could I sing that they sang not?\nWords that, before I heed time's call,\nIn me will not all be forgot."
     //}
