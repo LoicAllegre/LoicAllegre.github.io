@@ -55,8 +55,8 @@ var personal_poems = [
         "text": "古紙の\n床しい香り\n無数の世"
     }.
     {
-        "id" : "sister",
-        "author" : "",
+        "id": "sister",
+        "author": "",
         "text": "I love you, my sister\nIn silences unheard\nAn echo, and a word\nTo walk with you forever"
     }
      //{
