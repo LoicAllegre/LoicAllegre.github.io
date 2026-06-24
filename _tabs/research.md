@@ -19,6 +19,11 @@ Nancy, France, July 1, 2024
 
 ## Talks
 
+- [First-order Intuitionistic Multiplicative Exponential Linear Logic with Hilbert's Epsilon](/assets/pdf/irn-li-2026.pdf)  
+General Meeting of the IRN "Logic and Interaction"
+Lyon, France, June 24, 2026  
+
+
 - [Quantifiers: A History Between Logic, Mathematics and Linguistics]()  
 Loïc Allègre, Christian Retoré  
 26th Colloquium of the Inter-IREM Commission "Epistemology and History of Mathematics"  
