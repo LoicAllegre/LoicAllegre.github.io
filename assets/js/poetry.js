@@ -53,12 +53,17 @@ var personal_poems = [
         "id": "furugami",
         "author": "",
         "text": "古紙の\n床しい香り\n無数の世"
-    }.
+    },
     {
+        "id": "ether",
+        "author": "",
+        "text": "Slightly untethered\nEther unfiltered on filigrees of silver\nSilently blind\nWeaving some unknown other face\nTo waves and winds of unkind haste\n"
+    }
+    /*{
         "id": "sister",
         "author": "",
         "text": "I love you, my sister\nIn silences unheard\nAn echo, and a word\nTo walk with you forever"
-    }
+    }*/
      //{
     //    "id": "Lissadell",
     //    "author": "",
