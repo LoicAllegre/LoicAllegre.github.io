@@ -31,7 +31,7 @@ Click on the Yaku names for example hands and/or additional info. <a href="#/" o
 
 <div id="pinfu" style="padding-left: 50px; margin-bottom: 40px; display: none"></div>
 
-- <a class="yakulink" href="#/" onclick="displayInfo('tanyao', '[m3m3m3s2s3s4s9s9p6p8][(p4@p4p4)]+p7')">Tanyao</a> : All ordinary tiles, i.e. no Terminals (1/9), no Honours (winds/dragons).
+- <a class="yakulink" href="#/" onclick="displayInfo('tanyao', '[m3m3m3s2s3s4s7s7p6p8][(p4@p4p4)]+p7')">Tanyao</a> : All ordinary tiles, i.e. no Terminals (1/9), no Honours (winds/dragons).
 
 <div id="tanyao" style="padding-left: 50px; margin-bottom: 40px; display: none"></div>
 
