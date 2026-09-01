@@ -5,8 +5,6 @@ icon: fas fa-graduation-cap
 order: 3
 ---
 
-Regrettably for my past and future students, I also very much enjoy explaining stuff to people.
-
 
 ### University of Montpellier
 
